@@ -1,0 +1,34 @@
+{
+  "name": "citrus/marketplace-api",
+  "type": "library",
+  "description": "https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=133&INDEX=Y",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Marat Shamshutdinov",
+      "email": "marat@citrus-soft.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "ext-simplexml": "*",
+    "ext-mbstring": "*",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.0"
+    },
+    "preferred-install": {
+      "*": "dist"
+    }
+  },
+  "autoload": {
+    "files": ["src/functions.php"],
+    "psr-4": {
+      "Citrus\\MarketplaceApi\\": "src/"
+    }
+  }
+}
