@@ -127,7 +127,7 @@ class ClientsApi
 			$url = $this->getUrl(				[
 				'partner_id' => $this->credentials->getPartnerId(),
 				'module_id' => $this->getModuleId(),
-				'key' => $this->getClientKey(),
+				'key' => $this->clientKey,
 				'action' => $action,
 				'hash' => $hash,
 			]);

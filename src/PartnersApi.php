@@ -89,7 +89,7 @@ class PartnersApi
 			}
 
 			return $params[$param];
-		}, static::ACTION_AUTH_KEYS[$action] ?: []);
+		}, static::ACTION_AUTH_KEYS[$action] ?? []);
 
 		$queryData = http_build_query(array_merge($params, [
 				"action" => $action,

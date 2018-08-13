@@ -17,7 +17,7 @@ namespace Citrus\MarketplaceApi;
  * @property string clientKeyHash Хэш ключа клиента
  * @property string seller Тип
  */
-class CallbackActivateCoupon extends Callback
+interface CallbackActivateCouponInterface extends CallbackInterface
 {
-
+	const COUPON = 'coupon';
 }

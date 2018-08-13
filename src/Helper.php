@@ -41,7 +41,7 @@ class Helper
 		$modules = $api
 			->setFetchAllPages(true)
 			->marketplaceProductList([
-				'modulePartnerId' => PARTNER_ID
+				'modulePartnerId' => $this->credentials->getPartnerId()
 			]);
 
 		array_walk($modules['list'], function ($module) use ($api, $url) {
