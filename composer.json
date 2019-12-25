@@ -2,7 +2,7 @@
   "name": "citrus/marketplace-api",
   "type": "library",
   "description": "https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=133&INDEX=Y",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
@@ -17,10 +17,10 @@
     "ext-curl": "*",
     "ext-json": "*"
   },
+  "require-dev": {
+    "psr/http-server-middleware": "^1.0"
+  },
   "config": {
-    "platform": {
-      "php": "7.0.0"
-    },
     "preferred-install": {
       "*": "dist"
     }
