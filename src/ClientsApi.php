@@ -268,10 +268,11 @@ class ClientsApi
 
 		if (\count($filter))
 		{
-			$result = array_filter($result, function ($v) use ($filter) {
+			$result = array_filter($result, function ($resultItem) use ($filter) {
 				foreach ($filter as $key => $value)
 				{
-					if ($v[$key] != $value)
+					$resultValue = $v[$key] ?? '';
+					if ($resultValue != $value)
 					{
 						return false;
 					}
