@@ -138,6 +138,16 @@ class ClientsApi
 		}
 
 		$res = file_get_contents($url);
+
+		/**
+		 * API отдаёт знак & в значениях элементов без экранирования
+		 *
+		 * В SimpleXML отдает пустой результат с ошибкой xmlParseEntityRef: no name
+		 *
+		 * Исправим это заменой н а &amp;
+		 */
+		$res = preg_replace('/&(?!#?[a-z0-9]+;)/', '&amp;', $res);
+
 		if ($action == 'list' && stripos($res, 'ERROR') !== 0)
 		{
 			return $this->decode(array_map(function ($e) {
