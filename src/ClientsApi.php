@@ -281,7 +281,7 @@ class ClientsApi
 			$result = array_filter($result, function ($resultItem) use ($filter) {
 				foreach ($filter as $key => $value)
 				{
-					$resultValue = $v[$key] ?? '';
+					$resultValue = $resultItem[$key] ?? '';
 					if ($resultValue != $value)
 					{
 						return false;
