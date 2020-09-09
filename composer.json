@@ -1,9 +1,9 @@
 {
-  "name": "citrus/marketplace-api",
+  "name": "citrus-soft/marketplace-api",
   "type": "library",
   "description": "https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=133&INDEX=Y",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Marat Shamshutdinov",
